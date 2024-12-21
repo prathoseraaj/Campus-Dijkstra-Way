@@ -1,3 +1,4 @@
+import streamlit as st
 import heapq
 
 def dijkstra(graph, start):
@@ -56,15 +57,23 @@ graph = {
     'Non IT building': {'Short-cut near Non IT building': 120, 'Sai Baba temple': 250}
 }
 
+# Streamlit App
+st.title("Dijkstra's Shortest Path Algorithm")
 
-start_node = input("START POINT: ")  # Starting node
-end_node = input("DESTINATION: ")    # Destination node
+start_node = st.selectbox("Select the start point", list(graph.keys()))
+end_node = st.selectbox("Select the destination", list(graph.keys()))
 
-    # Run Dijkstra's algorithm
-distances, previous_nodes = dijkstra(graph, start_node)
+if st.button("Find Shortest Path"):
+    if start_node and end_node:
+        # Run Dijkstra's algorithm
+        distances, previous_nodes = dijkstra(graph, start_node)
 
-print("Distances:", distances)
-print("Previous nodes:", previous_nodes)
+        # Get the shortest path
+        path = shortest_path(previous_nodes, end_node)
 
-print(f"Shortest distance from {start_node} to {end_node}: {distances[end_node]}")
-print(f"Path: {' -> '.join(shortest_path(previous_nodes, end_node))}")
+        
+        st.subheader(f"Shortest distance from {start_node} to {end_node}")
+        st.write(f"Distance: {distances[end_node]}")
+
+        st.subheader(f"Shortest Path:")
+        st.write(" -> ".join(path))
