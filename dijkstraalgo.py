@@ -25,7 +25,7 @@ def dijkstra(graph, start):
 
     return distances, previous_nodes
 
-def shortest_path(previous_nodes,start,end):
+def shortest_path(previous_nodes,end):
 
     path = []
     current = end
@@ -55,4 +55,4 @@ print("Distances:", distances)
 print("Previous nodes:", previous_nodes)
 
 print(f"Shortest distance from {start_node} to {end_node}: {distances[end_node]}")
-print(f"Path: {' -> '.join(path)}")
+print(f"Path: {' -> '.join(shortest_path)}")
