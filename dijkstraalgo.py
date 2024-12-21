@@ -72,7 +72,7 @@ if st.button("Find Shortest Path"):
         path = shortest_path(previous_nodes, end_node)
 
         
-        st.subheader(f"Shortest distance from {start_node} to {end_node}")
+        st.subheader(f"Shortest distance from {start_node} to {end_node} m")
         st.write(f"Distance: {distances[end_node]}")
 
         st.subheader(f"Shortest Path:")
