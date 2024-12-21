@@ -55,4 +55,4 @@ print("Distances:", distances)
 print("Previous nodes:", previous_nodes)
 
 print(f"Shortest distance from {start_node} to {end_node}: {distances[end_node]}")
-print(f"Path: {' -> '.join(shortest_path)}")
+print(f"Path: {' -> '.join(shortest_path(previous_nodes, end_node))}")
