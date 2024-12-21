@@ -39,7 +39,7 @@ def shortest_path(previous_nodes,end):
     return path
 
 # Streamlit App
-st.title("Dijkstra's Shortest Path Algorithm")
+st.title("Campus-Dijkstra-Way")
 
 start_node = st.selectbox("Select the start point", list(graph.keys()))
 end_node = st.selectbox("Select the destination", list(graph.keys()))
