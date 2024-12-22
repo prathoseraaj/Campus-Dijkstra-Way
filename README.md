@@ -37,29 +37,14 @@ streamlit run app.py
 
 ## Contribution
 
-welcome contributions to improve the project! If you'd like to contribute, please follow these steps:
+-welcome contributions to improve the project! If you'd like to contribute, please follow these steps:
 
-1. **Fork the repository**: Click the "Fork" button at the top right of this page to create your own copy of the repository.
-2. **Clone your fork**: Clone the repository to your local machine.
-   ```bash
-   git clone https://github.com/your-username/campus-dijkstra-way.git
-3. **Create a new branch**: Before making any changes, create a new branch.
-   ```bash
-   git checkout -b your-branch-name
-4. **Make changes**: Implement the feature or fix the issue you're working on.
-Commit your changes: After making your changes, commit them with a descriptive message.
-```bash
-   git commit -m "Your message describing the changes"
-```
-5.**Push your changes**: Push your changes to your forked repository.
-```bash
-   git push origin your-branch-name
-```
-6.**Submit a Pull Request**: Go to the original repository and submit a pull request describing your changes.
+-**Fork the repository**: Click the "Fork" button at the top right of this page to create your own copy of the repository.
+-**Submit a Pull Request**: Go to the original repository and submit a pull request describing your changes.
 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 
