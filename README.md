@@ -37,14 +37,14 @@ streamlit run app.py
 
 ## Contribution
 
--welcome contributions to improve the project! If you'd like to contribute, please follow these steps:
+- welcome contributions to improve the project! If you'd like to contribute, please follow these steps:
 
--**Fork the repository**: Click the "Fork" button at the top right of this page to create your own copy of the repository.
--**Submit a Pull Request**: Go to the original repository and submit a pull request describing your changes.
+- **Fork the repository**: Click the "Fork" button at the top right of this page to create your own copy of the repository.
+- **Submit a Pull Request**: Go to the original repository and submit a pull request describing your changes.
 
 
 ## License
--This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 
