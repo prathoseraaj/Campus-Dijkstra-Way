@@ -68,8 +68,19 @@ if st.sidebar.button("Find Shortest Path"):
         # Display shortest distance and path
         st.subheader(f"Shortest distance from {start_node} to {end_node}")
         st.write(f"Distance: {distances[end_node]} m")
+
         st.subheader("Shortest Path:")
-        st.write(" -> ".join(path))
+        highlighted_path = f'''
+        <div style="
+            background-color: #872828;
+            font-weight: bold;
+            text-align: center;">
+            {" -> ".join(path)}
+        </div>
+        '''
+        st.markdown(highlighted_path, unsafe_allow_html=True)
+
+
 
         # Initialize Folium map for the selected path
         m = folium.Map(location=coordinates[start_node], zoom_start=17)
