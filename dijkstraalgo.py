@@ -2,7 +2,6 @@ import streamlit as st
 import heapq
 from graph import graph
 from coordinates import coordinates
-import pandas as pd
 import folium
 import streamlit.components.v1 as components
 
