@@ -74,7 +74,6 @@ if st.sidebar.button("Find Shortest Path"):
         # Initialize Folium map for the selected path
         m = folium.Map(location=coordinates[start_node], zoom_start=17)
 
-        # Highlight the start and end points on the map with custom markers
         path_coordinates = []
 
         for node in path:
