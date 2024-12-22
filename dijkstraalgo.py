@@ -43,11 +43,11 @@ def shortest_path(previous_nodes,end):
     return path
 
 # Streamlit App
-st.set_page_config(page_title="Campus Navigator", layout="wide", page_icon="🗺️")
-st.title("Campus Navigator")
+st.set_page_config(page_title="Campus-Dijkstra-Way", layout="wide", page_icon="🗺️")
+st.title("Campus-Dijkstra-Way")
 
 # Always show the about section
-st.subheader("Welcome to the Campus Navigator!")
+st.subheader("Welcome to the Campus-Dijkstra-Way!")
 st.write("""
     This tool helps you find the shortest path between locations within Jain University using Dijkstra's Algorithm.
     Select the starting and destination points from the sidebar to get started.
