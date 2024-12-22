@@ -21,10 +21,11 @@ The system combines:
 - **User Interface**: Easy-to-use Streamlit interface to select starting and destination points.
 - **Real-time Feedback**: Display the shortest distance and the path dynamically based on user inputs.
 
-## Prerequisites
+##Usage
+- **Start by
+```
+streamlit run app.py
 
-- Python 3.8+
-- Required Python packages (see `requirements.txt`)
 
 ## Installation
 
@@ -32,4 +33,7 @@ The system combines:
 ```bash
 git clone https://github.com/prathoseraaj/Campus-Dijkstra-Way.git
 cd Campus-Dijkstra-Way
+
+
+
 
