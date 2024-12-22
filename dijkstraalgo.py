@@ -1,6 +1,10 @@
 import streamlit as st
 import heapq
 from graph import graph
+from coordinates import coordinates
+import pandas as pd
+import folium
+import streamlit.components.v1 as components
 
 def dijkstra(graph, start):
     
@@ -58,3 +62,28 @@ if st.button("Find Shortest Path"):
 
         st.subheader(f"Shortest Path:")
         st.write(" -> ".join(path))
+
+        # Initialize Folium map for the selected path
+        m = folium.Map(location=[12.641493, 77.436931], zoom_start=17)
+
+        # Highlight the start and end points on the map with custom markers
+        path_coordinates = []
+
+        for node in path:
+            lat, lon = coordinates[node]
+            path_coordinates.append((lat, lon))
+            folium.Marker([lat, lon], popup=f"{node}", icon=folium.Icon(color='green')).add_to(m)
+
+        # Add line to connect the nodes in the path
+        folium.PolyLine(
+            locations=path_coordinates,
+            color='red',
+            weight=3,
+            opacity=0.7
+        ).add_to(m)
+
+        # Generate HTML for the updated map
+        map_html = m._repr_html_()
+
+        # Display the updated map as an iframe
+        components.html(map_html, height=500)
