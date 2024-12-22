@@ -49,7 +49,7 @@ st.title("Campus Navigator")
 # Always show the about section
 st.subheader("Welcome to the Campus Navigator!")
 st.write("""
-    This tool helps you find the shortest path between locations within our campus using Dijkstra's Algorithm.
+    This tool helps you find the shortest path between locations within Jain University using Dijkstra's Algorithm.
     Select the starting and destination points from the sidebar to get started.
 """)
 
