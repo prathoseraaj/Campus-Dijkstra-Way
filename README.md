@@ -1,6 +1,6 @@
 # Campus-Dijkstra-Way
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
 
 **Campus-Dijkstra-Way** is a web application that helps you find the shortest path between locations within Jain University using **Dijkstra's Algorithm**. This tool is designed to make campus navigation easier, by providing an efficient and intuitive solution to explore campus routes. While current campus-goers might already know their way around, this tool is perfect for newcomers. It makes navigating campus easy and intuitive. 🌱
 
