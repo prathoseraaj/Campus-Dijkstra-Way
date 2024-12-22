@@ -14,5 +14,5 @@ coordinates = {
     'Sai Baba temple': (12.63855, 77.442719),
     'Colosseum': (12.637794, 77.44344),
     'Short-cut near Non IT building': (12.639925, 77.439645),
-    'Non IT Building': (12.639159, 77.440490)
+    'Non IT building': (12.639159, 77.440490)
 }
