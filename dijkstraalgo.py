@@ -43,12 +43,22 @@ def shortest_path(previous_nodes,end):
     return path
 
 # Streamlit App
-st.title("Campus-Dijkstra-Way")
+st.set_page_config(page_title="Campus Navigator", layout="wide", page_icon="🗺️")
+st.title("Campus Navigator")
 
-start_node = st.selectbox("Select the start point", list(graph.keys()))
-end_node = st.selectbox("Select the destination", list(graph.keys()))
+# Always show the about section
+st.subheader("Welcome to the Campus Navigator!")
+st.write("""
+    This tool helps you find the shortest path between locations within our campus using Dijkstra's Algorithm.
+    Select the starting and destination points from the sidebar to get started.
+""")
 
-if st.button("Find Shortest Path"):
+# Sidebar for start and destination selection
+st.sidebar.header("Path Selection")
+start_node = st.sidebar.selectbox("Select the start point", list(graph.keys()))
+end_node = st.sidebar.selectbox("Select the destination", list(graph.keys()))
+
+if st.sidebar.button("Find Shortest Path"):
     if start_node and end_node:
         # Run Dijkstra's algorithm
         distances, previous_nodes = dijkstra(graph, start_node)
@@ -56,15 +66,14 @@ if st.button("Find Shortest Path"):
         # Get the shortest path
         path = shortest_path(previous_nodes, end_node)
 
-        
-        st.subheader(f"Shortest distance from {start_node} to {end_node} ")
+        # Display shortest distance and path
+        st.subheader(f"Shortest distance from {start_node} to {end_node}")
         st.write(f"Distance: {distances[end_node]} m")
-
-        st.subheader(f"Shortest Path:")
+        st.subheader("Shortest Path:")
         st.write(" -> ".join(path))
 
         # Initialize Folium map for the selected path
-        m = folium.Map(location=[12.641493, 77.436931], zoom_start=17)
+        m = folium.Map(location=coordinates[start_node], zoom_start=17)
 
         # Highlight the start and end points on the map with custom markers
         path_coordinates = []
@@ -72,14 +81,14 @@ if st.button("Find Shortest Path"):
         for node in path:
             lat, lon = coordinates[node]
             path_coordinates.append((lat, lon))
-            folium.Marker([lat, lon], popup=f"{node}", icon=folium.Icon(color='green')).add_to(m)
+            folium.Marker([lat, lon], popup=f"{node}", icon=folium.Icon(color="green")).add_to(m)
 
         # Add line to connect the nodes in the path
         folium.PolyLine(
             locations=path_coordinates,
-            color='red',
+            color="red",
             weight=3,
-            opacity=0.7
+            opacity=0.7,
         ).add_to(m)
 
         # Generate HTML for the updated map
