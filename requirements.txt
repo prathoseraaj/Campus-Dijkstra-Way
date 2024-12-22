@@ -1,4 +1,3 @@
-streamlit
-folium
-pandas
-heapq
+streamlit==1.15.0
+folium==0.14.0
+pandas==1.5.0
